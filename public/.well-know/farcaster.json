@@ -1,6 +1,6 @@
 {
   "frame": {
-    "name": "Tip Fun",
+    "name": "Tip Mini app",
     "version": "1",
     "iconUrl": "https://tip-miniapp.vercel.app/icon.png",
     "homeUrl": "https://tip-miniapp.vercel.app",
@@ -8,17 +8,15 @@
     "splashImageUrl": "https://tip-miniapp.vercel.app/splash.png",
     "splashBackgroundColor": "#333333",
     "webhookUrl": "https://tip-miniapp.vercel.app/api/webhook",
-    "subtitle": "Small Tips, Big Fun",
+    "subtitle": "Small tips, big fun",
     "description": "Tip Fun brings you quick, playful tips and surprises to make everyday life more fun!",
     "primaryCategory": "utility",
     "tags": [
       "social",
-      "message",
-      "community",
-      "tool",
-      "tips"
+      "tips",
+      "tip"
     ],
-    "tagline": "Small Tips, Big Fun"
+    "tagline": "Tip Fun brings you quick"
   },
   "accountAssociation": {
     "header": "",
