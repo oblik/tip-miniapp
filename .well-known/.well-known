@@ -1,9 +1,1 @@
-{
-  "name": "Tip MiniApp",
-  "iconUrl": "https://yourdomain.com/icon.png",
-  "homeUrl": "https://yourdomain.com",
-  "requiredChains": ["eip155:8453"],
-  "description": "Mini App pour envoyer des tips sur le réseau Base via Farcaster",
-  "publisher": "TonNom",
-  "categories": ["Finance", "Tips"]
-}
+
