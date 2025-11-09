@@ -25,6 +25,6 @@
     "ogTitle": "Tip Mini app",
     "ogDescription": "Tip Fun brings you quick, playful tips and surprises to make everyday life more fun!",
     "ogImageUrl": "https://tip-miniapp.vercel.app/image.png",
-    "noindex": true
+    "noindex": false
   }
 }
