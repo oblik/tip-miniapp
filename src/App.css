@@ -1,155 +1,251 @@
-body {
-    margin: 0;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #f5f5f5;
-    color: #111;
+/* ----------- GLOBAL ----------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --text: #1e1e2d;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+/* ----------- MAIN LAYOUT ----------- */
+
 .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef1f7 100%);
 }
 
 .counter {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #ff3c3c;
+  background: var(--surface);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--accent);
 }
 
+/* ----------- TIP CARD ----------- */
+
 .tip-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 16px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    text-align: center;
-    margin-bottom: 40px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
 }
 
 .tip-card h1 {
-    margin: 0 0 10px;
-    font-size: 28px;
-    font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--text);
 }
 
 .subtitle {
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #666;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
 }
 
-.form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-}
-
-.form button {
-    width: 100%;
-    padding: 12px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.form button:hover {
-    background: #111;
-}
-
-.quick-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.quick-buttons button {
-    flex: 1;
-    margin: 0 4px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background: #f5f5f5;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.quick-buttons button:hover {
-    background: #eaeaea;
-}
-
-.funMessage {
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ff3c3c;
-}
-
-.history {
-    width: 100%;
-    max-width: 500px;
-}
-
-.history h2 {
-    font-size: 20px;
-    margin-bottom: 16px;
-}
-
-.tipLine {
-    background: #fff;
-    padding: 12px 16px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tipAmount {
-    font-weight: 600;
-}
-
-.tipMsg {
-    color: #ff3c3c;
-    margin-left: 10px;
-    font-size: 14px;
-}
+/* ----------- TOKEN BUTTONS ----------- */
 
 .token-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 12px;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .token-buttons button {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background: #f5f5f5;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.token-buttons button.selected {
-    background: #000;
-    color: #fff;
-    border-color: #000;
+  flex: 1 0 45%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .token-buttons button:hover {
-    background: #eaeaea;
-    transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.token-buttons .selected {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* ----------- FORM ----------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form input:focus {
+  border-color: var(--accent);
+}
+
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.quick-buttons button {
+  flex: 1 0 45%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quick-buttons button:hover {
+  background: var(--accent-hover);
+}
+
+button.Send_Tip {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+button.Send_Tip:hover {
+  background: var(--accent-hover);
+}
+
+/* ----------- FUN MESSAGE ----------- */
+
+.funMessage {
+  margin-top: 1.2rem;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-weight: 500;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------- HISTORY ----------- */
+
+.history {
+  margin-top: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.history h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tipLine {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.tipLine:last-child {
+  border-bottom: none;
+}
+
+.tipAmount {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tipAddress {
+  font-family: monospace;
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.tipMsg {
+  color: var(--text);
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+@media (min-width: 768px) {
+  .tip-card {
+    max-width: 480px;
+  }
+
+  .token-buttons button,
+  .quick-buttons button {
+    flex: 1 0 22%;
+  }
 }

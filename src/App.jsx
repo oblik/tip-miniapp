@@ -123,7 +123,7 @@ export default function App() {
                         value={amount}
                         onChange={e => setAmount(e.target.value)}
                     />
-                    <button onClick={() => sendTip()}>Send Tip</button>
+                    <button class="Send_Tip" onClick={() => sendTip()}>Send Tip</button>
                 </div>
 
                 {message && <div className="funMessage">{message}</div>}
